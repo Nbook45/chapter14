@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> JavaScript </title>
+	<meta charset="utf-8">
+	
+<style>
+input { display: block; margin-bottom: 1em; }
+label { float: left; width: 5em; padding-right: 1em; text-align: right; }
+#submit {margin-left: 7em; }
+</style>
+<script>
+function validateForm() {
+if (document.forms[0].userName.value == "" ) {
+alert("Must input name.");
+return false;
+} end if
+if (document.forms[0].email.value == "" ) {
+alert("Must input valid email.");
+return false;
+} end if
+alert("Name and email are valid.");
+return true;
+} end function validateForm
+</script>
+</head>
+<body>
+<h1> JavaScript Form </h1>
+
+<form>
+  Name: <input type="text" name="userName" id="userName">
+  <br>
+  E-Mail Address: <input type="text" name="email" id="email">
+  
+</form>
+<form method="post"
+action="http://www.markmurtha.com/csis128/readform.asp"
+onsubmit="return validateForm();">
+
+<input type="submit" value="Sign Up Now">
+</body>
+</html>
